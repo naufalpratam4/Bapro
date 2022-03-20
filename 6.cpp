@@ -2,24 +2,26 @@
 using namespace std;
 
 int main(){
-	int a, b, c, d;
+	int nilai[] = {1,8,5,2};
+	int length = sizeof(nilai)/sizeof(*nilai);
+	int temp;
 	
-	cout<<"Masukkan nilai a = ";
-	cin>>a;
-	cout<<"Masukkan nilai b = ";
-	cin>>b;
-	cout<<"Masukkan nilai c = ";
-	cin>>c;
-	cout<<"Masukkan nilai d = ";
-	cin>>d;
-	 
-	if(a > b && a > c && a > d){
-		if(b > c && b > d){
-			if(c > d){
-				cout<<d<<c<<b<<a;
+	for(int i = 1; i < length; i++){
+		for(int j = 0; j < length-i; j++){
+			if(nilai[j] > nilai [j+1]){
+				temp = nilai[j];
+				nilai[j] = nilai[j+1];
+				nilai[j+1] = temp;
+			}
 		}
-	} else {
-		
+		for(int l = 0; l < length; l++){
+			cout<<"| "<<nilai[l]<<" | ";
+		}
+		cout<<endl;
 	}
-	
+	cout<<endl;
+	cout<<"Hasil yang telah diurutkan : ";
+	for(int k = 0; k < length; k++){
+		cout<<nilai[k]<<" ";
+	}
 }
