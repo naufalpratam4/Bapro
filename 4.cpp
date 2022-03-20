@@ -14,20 +14,35 @@ int main(){
 		cin>>b;
 		cout<<"Masukkan nilai c : ";
 		cin>>c;	
-	
-		if(a == b){
-	    	if(a == c) {
-	      		cout<<"Sama Sisi";
-	    	}
-	  	} else if (a != b){
-	    	if(b == c){
-	      		
-	    	}
-	  	} else if (a != b){
-	    	if(a != c){
-	      		cout<<"Sembarang";
-	    	} 
-	  	}
+		
+		cout<<a<<" "<<b<<" "<<c<<endl;
+		if (a == b){
+			if(a == c){
+				cout<<"Segitiga Sama Sisi";
+			} else if(a != c){
+				cout<<"Segitiga Sama Kaki";
+			}
+		} else if (a == c){
+			if(a == b){
+				cout<<"Segitiga Sama Sisi";
+			} else if(a != b){
+				cout<<"Segitiga Sama Kaki";
+			}
+		} else if (b == c){
+			if(b == a){
+				cout<<"Segitiga Sama Sisi";
+			} else if(b != a){
+				cout<<"Segitiga Sama Kaki";
+			}
+		} else if (a != b) {
+			if(a != c) {
+				cout<<"Segitiga Sembarang";
+			}
+		} else if (a != c){
+			if(a != b) {
+				cout<<"Segitiga Sembarang";
+			}
+		}
 	  	cout<<endl;
 	  	cout<<"Ingin ulang? : ";
 	  	cin>>ulang;
